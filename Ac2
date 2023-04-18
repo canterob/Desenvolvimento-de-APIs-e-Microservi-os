@@ -1,0 +1,12 @@
+from flask import Flask, jsonify
+
+app = Flask(__name__)
+
+@app.route('/ac2', methods=['GET'])
+def consulta():
+    informacoes = {'loja': 'store', 'price': '15.99'}
+
+    return jsonify(informacoes)
+
+if __name__ == '_main_':
+    app.run()
